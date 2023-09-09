@@ -18,6 +18,7 @@ def skip(
         downsample_mode (string): 'stride|avg|max|lanczos2' (default: 'stride')
 
     """
+    print("Use Skip Net")
     assert len(num_channels_down) == len(num_channels_up) == len(num_channels_skip)
 
     n_scales = len(num_channels_down) 

@@ -119,6 +119,6 @@ def conv(in_f, out_f, kernel_size, stride=1, bias=True, pad='zero', downsample_m
   
     convolver = nn.Conv2d(in_f, out_f, kernel_size, stride, padding=to_pad, bias=bias)
 
-
+    # filters list that layers list does not contain None
     layers = filter(lambda x: x is not None, [padder, convolver, downsampler])
     return nn.Sequential(*layers)
